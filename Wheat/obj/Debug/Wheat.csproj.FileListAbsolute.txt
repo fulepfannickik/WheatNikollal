@@ -1,0 +1,11 @@
+H:\12\IKTP\Wheat\Wheat\bin\Debug\Wheat.exe.config
+H:\12\IKTP\Wheat\Wheat\bin\Debug\Wheat.exe
+H:\12\IKTP\Wheat\Wheat\bin\Debug\Wheat.pdb
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.csproj.AssemblyReference.cache
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.Form1.resources
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.Properties.Resources.resources
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.csproj.GenerateResource.cache
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.exe
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.pdb
+H:\12\IKTP\Wheat\Wheat\obj\Debug\Wheat.exe.config
