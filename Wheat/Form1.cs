@@ -8,8 +8,8 @@ namespace Wheat
 {
     public partial class Form1 : Form
     {
-        Dictionary<string, List<string>> data = new Dictionary<string, List<string>>();
-        List<string> headers = new List<string>();
+        List<Country> countries = new List<Country>();
+        List<string> years = new List<string>();
 
         public Form1()
         {
@@ -22,30 +22,45 @@ namespace Wheat
             if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
             string path = openFileDialog.FileName;
+            countries.Clear();
+            years.Clear();
 
             using (StreamReader reader = new StreamReader(path))
             {
-                string headerLine = reader.ReadLine();
+               
+                if (!reader.EndOfStream)
+                {
+                    string headerLine = reader.ReadLine();
+                    string[] headerParts = headerLine.Split(';');
 
-                headers = headerLine.Split(';').Skip(1).ToList();
+                    for (int i = 1; i < headerParts.Length; i++)
+                    {
+                        years.Add(headerParts[i]);
+                    }
+                }
 
-                data.Clear();
-
+                
                 while (!reader.EndOfStream)
                 {
                     string line = reader.ReadLine();
                     string[] parts = line.Split(';');
 
-                    string country = parts[0];
 
-                    List<string> values = new List<string>();
-
+                    Dictionary<string, double> d = new Dictionary<string, double>();
                     for (int i = 1; i < parts.Length; i++)
                     {
-                        values.Add(parts[i]);
+                        if (parts[i] == ":")
+                        {
+                           d.Add(years[i - 1], double.NaN);
+                        }
+                        else
+                        {
+                            d.Add(years[i - 1], double.Parse(parts[i]));
+                        }
                     }
 
-                    data[country] = values;
+                    Country country = new Country(parts[0], d);
+                    countries.Add(country);
                 }
             }
 
@@ -57,33 +72,35 @@ namespace Wheat
             WheatDataGrid.Rows.Clear();
             WheatDataGrid.Columns.Clear();
 
-            if (headers == null || headers.Count == 0) return;
+            WheatDataGrid.ColumnCount = years.Count;
+            WheatDataGrid.RowCount = countries.Count;
 
 
+            if (years.Count == 0) return;
 
-            for (int i = 0; i < headers.Count; i++)
+
+            for (int i = 0; i < years.Count; i++)
             {
-                WheatDataGrid.Columns.Add(i.ToString(), headers[i]);
+                WheatDataGrid.Columns[i].Name = years[i];
             }
 
 
-            foreach (var kvp in data)
+            for (int i = 0; i < countries.Count; i++)
             {
-                List<string> row = new List<string>();
-                row.Add(kvp.Key);
-                for (int i = 0; i < kvp.Value.Count; i++)
+                WheatDataGrid.Rows[i].HeaderCell.Value = countries[i].Name;
+                for (int j = 0; j < countries[i].Data.Keys.Count; j++)
                 {
-                    kvp.Value[i] = kvp.Value[i].Replace(":", "-");
+                
+                    string year = years[j];
+                   
+                    WheatDataGrid.Rows[i].Cells[j].Value = countries[i].Data[year];
                 }
-
-                row.AddRange(kvp.Value).Skip(1);
-
-          
-                WheatDataGrid.Rows.Add(row.ToArray());
             }
 
-            WheatDataGrid.AllowUserToAddRows = false;
-            WheatDataGrid.AutoResizeColumns();
+            foreach (DataGridViewColumn col in WheatDataGrid.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
     }
 }
