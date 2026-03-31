@@ -20,3 +20,14 @@ H:\12\IKTP\Wheat\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.GenerateResource.cac
 H:\12\IKTP\Wheat\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
 H:\12\IKTP\Wheat\WheatNikollal\Wheat\obj\Debug\Wheat.exe
 H:\12\IKTP\Wheat\WheatNikollal\Wheat\obj\Debug\Wheat.pdb
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\bin\Debug\Wheat.exe.config
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\bin\Debug\Wheat.exe
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\bin\Debug\Wheat.pdb
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.AssemblyReference.cache
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.exe.config
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.Form1.resources
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.Properties.Resources.resources
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.GenerateResource.cache
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.exe
+D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.pdb

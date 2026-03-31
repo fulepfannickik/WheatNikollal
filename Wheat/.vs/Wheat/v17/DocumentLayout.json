@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\",
+  "WorkspaceRootPath": "D:\\12\\progi\\WheatProjekt\\WheatNikollal\\Wheat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|h:\\12\\iktp\\wheat\\wheatnikollal\\wheat\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|D:\\12\\progi\\WheatProjekt\\WheatNikollal\\Wheat\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|solutionrelative:country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|d:\\12\\progi\\wheatprojekt\\wheatnikollal\\wheat\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04C8C9B0-E11F-4CC6-9785-46B8EB71FFC2}|Wheat.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Form1.cs",
+              "DocumentMoniker": "D:\\12\\progi\\WheatProjekt\\WheatNikollal\\Wheat\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Form1.cs",
+              "ToolTip": "D:\\12\\progi\\WheatProjekt\\WheatNikollal\\Wheat\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAIwFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwHUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T08:58:40.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Form1.cs",
+              "DocumentMoniker": "D:\\12\\progi\\WheatProjekt\\WheatNikollal\\Wheat\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Form1.cs [Design]",
+              "ToolTip": "D:\\12\\progi\\WheatProjekt\\WheatNikollal\\Wheat\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T08:58:22.097Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Country.cs",
-              "DocumentMoniker": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Country.cs",
-              "RelativeDocumentMoniker": "Country.cs",
-              "ToolTip": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Country.cs",
-              "RelativeToolTip": "Country.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T08:37:02.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "H:\\12\\IKTP\\Wheat\\WheatNikollal\\Wheat\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T09:12:40.015Z",
-              "EditorCaption": ""
             }
           ]
         }

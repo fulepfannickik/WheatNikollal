@@ -16,6 +16,18 @@ namespace Wheat
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CategoryComboBox.Items.Add("Minden kategória...");
+            CategoryComboBox.Items.Add("Törpe");
+            CategoryComboBox.Items.Add("Kicsi");
+            CategoryComboBox.Items.Add("Közepes");
+            CategoryComboBox.Items.Add("Nagy");
+            CategoryComboBox.Items.Add("Óriási");
+
+            CategoryComboBox.SelectedIndex = 0;
+        }
+
         private void megnyitásToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -102,5 +114,54 @@ namespace Wheat
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (countries.Count == 0) return;
+
+            string selectedCategory = CategoryComboBox.SelectedItem.ToString();
+
+            if (selectedCategory == "Minden kategória...")
+            {
+                foreach (DataGridViewRow row in WheatDataGrid.Rows)
+                {
+                    row.Visible = true;
+                }
+                return;
+            }
+
+            double max2016 = countries
+                .Where(c => !double.IsNaN(c.Data["2016"]))
+                .Max(c => c.Data["2016"]);
+
+            foreach (DataGridViewRow row in WheatDataGrid.Rows)
+            {
+                string countryName = row.HeaderCell.Value.ToString();
+                Country c = countries.First(x => x.Name == countryName);
+
+                double value2016 = c.Data["2016"];
+                string category = "";
+                if (double.IsNaN(value2016))
+                {
+                    row.Visible = false;
+                }
+                else
+                {
+                    double percent = value2016 / max2016;
+
+                    if (percent >= 0 && percent < 0.10) category = "Törpe";
+                    else if (percent >= 0.10 && percent < 0.20) category = "Kicsi";
+                    else if (percent >= 0.20 && percent < 0.40) category = "Közepes";
+                    else if (percent >= 0.40 && percent < 0.60) category = "Nagy";
+                    else category = "Óriási";
+
+                    row.Visible = (category == selectedCategory);
+                }
+
+                   
+            }
+
+        }
+
     }
 }
