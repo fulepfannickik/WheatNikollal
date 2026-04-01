@@ -31,3 +31,15 @@ D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.GenerateReso
 D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
 D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.exe
 D:\12\progi\WheatProjekt\WheatNikollal\Wheat\obj\Debug\Wheat.pdb
+H:\12\IKTP\WheatNikollal\Wheat\bin\Debug\Wheat.exe.config
+H:\12\IKTP\WheatNikollal\Wheat\bin\Debug\Wheat.exe
+H:\12\IKTP\WheatNikollal\Wheat\bin\Debug\Wheat.pdb
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.AssemblyReference.cache
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.exe.config
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.Form1.resources
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.Properties.Resources.resources
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.GenerateResource.cache
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.exe
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.pdb
+H:\12\IKTP\WheatNikollal\Wheat\obj\Debug\Wheat.ChartForm.resources

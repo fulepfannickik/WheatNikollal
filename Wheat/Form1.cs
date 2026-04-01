@@ -37,43 +37,52 @@ namespace Wheat
             countries.Clear();
             years.Clear();
 
-            using (StreamReader reader = new StreamReader(path))
+            try
             {
-               
-                if (!reader.EndOfStream)
+                using (StreamReader reader = new StreamReader(path))
                 {
-                    string headerLine = reader.ReadLine();
-                    string[] headerParts = headerLine.Split(';');
 
-                    for (int i = 1; i < headerParts.Length; i++)
+                    if (!reader.EndOfStream)
                     {
-                        years.Add(headerParts[i]);
-                    }
-                }
+                        string headerLine = reader.ReadLine();
+                        string[] headerParts = headerLine.Split(';');
 
-                
-                while (!reader.EndOfStream)
-                {
-                    string line = reader.ReadLine();
-                    string[] parts = line.Split(';');
-
-
-                    Dictionary<string, double> d = new Dictionary<string, double>();
-                    for (int i = 1; i < parts.Length; i++)
-                    {
-                        if (parts[i] == ":")
+                        for (int i = 1; i < headerParts.Length; i++)
                         {
-                           d.Add(years[i - 1], double.NaN);
-                        }
-                        else
-                        {
-                            d.Add(years[i - 1], double.Parse(parts[i]));
+                            years.Add(headerParts[i]);
                         }
                     }
 
-                    Country country = new Country(parts[0], d);
-                    countries.Add(country);
+
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        string[] parts = line.Split(';');
+
+
+                        Dictionary<string, double> d = new Dictionary<string, double>();
+                        for (int i = 1; i < parts.Length; i++)
+                        {
+                            if (parts[i] == ":")
+                            {
+                                d.Add(years[i - 1], double.NaN);
+                            }
+                            else
+                            {
+                                d.Add(years[i - 1], double.Parse(parts[i]));
+                            }
+                        }
+
+                        Country country = new Country(parts[0], d);
+                        countries.Add(country);
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
 
             Showdata();
@@ -102,9 +111,9 @@ namespace Wheat
                 WheatDataGrid.Rows[i].HeaderCell.Value = countries[i].Name;
                 for (int j = 0; j < countries[i].Data.Keys.Count; j++)
                 {
-                
+
                     string year = years[j];
-                   
+
                     WheatDataGrid.Rows[i].Cells[j].Value = countries[i].Data[year];
                 }
             }
@@ -158,10 +167,67 @@ namespace Wheat
                     row.Visible = (category == selectedCategory);
                 }
 
-                   
+
             }
 
         }
+            
+            private void korToolStripMenu_Click(object sender, EventArgs e)
+            {
+                if (WheatDataGrid.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Nincs kijelölt ország!");
+                    return;
+                }
 
+                Dictionary<string, double> averages = new Dictionary<string, double>();
+
+               
+                foreach (DataGridViewRow row in WheatDataGrid.SelectedRows)
+                {
+                    string countryName = row.HeaderCell.Value.ToString();
+                    Country c = countries.First(x => x.Name == countryName);
+
+                    var validValues = c.Data.Values.Where(v => !double.IsNaN(v));
+
+                    if (validValues.Any())
+                    {
+                        averages[c.Name] = validValues.Average();
+                    }
+                }
+
+                if (averages.Count == 0) return;
+
+                double total = averages.Values.Sum();
+
+
+                Dictionary<string, double> filtered = new Dictionary<string, double>();
+                double otherSum = 0;
+
+                foreach (var item in averages)
+                {
+                    double percent = item.Value / total;
+
+                    if (percent < 0.02)
+                    {
+                        otherSum += item.Value;
+                    }
+                    else
+                    {
+                        filtered[item.Key] = item.Value;
+                    }
+                }
+
+                if (otherSum > 0)
+                {
+                    filtered["Egyéb"] = otherSum;
+                }
+
+                
+                ChartForm form = new ChartForm(filtered);
+                form.Show();
+        
+            }
     }
+    
 }
