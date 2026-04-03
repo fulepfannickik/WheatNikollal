@@ -228,6 +228,40 @@ namespace Wheat
                 form.Show();
         
             }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (countries.Count == 0) return;
+
+            Dictionary<string, int> categories = new Dictionary<string, int>();
+
+            categories["Törpe"] = 0;
+            categories["Kicsi"] = 0;
+            categories["Közepes"] = 0;
+            categories["Nagy"] = 0;
+            categories["Óriási"] = 0;
+
+            double max2016 = countries
+                .Where(c => !double.IsNaN(c.Data["2016"]))
+                .Max(c => c.Data["2016"]);
+
+            foreach (Country c in countries)
+            {
+                double value2016 = c.Data["2016"];
+                if (double.IsNaN(value2016)) continue;
+
+                double percent = value2016 / max2016;
+
+                if (percent < 0.10) categories["Törpe"]++;
+                else if (percent < 0.20) categories["Kicsi"]++;
+                else if (percent < 0.40) categories["Közepes"]++;
+                else if (percent < 0.60) categories["Nagy"]++;
+                else categories["Óriási"]++;
+            }
+
+            BarChartForm form = new BarChartForm(categories);
+            form.Show();
+        }
     }
     
 }
