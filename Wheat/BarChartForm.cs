@@ -29,6 +29,8 @@ namespace Wheat
 
             area.AxisX.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
             area.AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
+            area.AxisY.IntervalAutoMode = IntervalAutoMode.VariableCount;
+
 
             Series s = new Series();
             s.ChartType = SeriesChartType.Bar;
