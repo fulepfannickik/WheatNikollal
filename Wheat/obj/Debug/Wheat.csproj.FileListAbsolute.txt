@@ -55,3 +55,15 @@ D:\pankja\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
 D:\pankja\WheatNikollal\Wheat\obj\Debug\Wheat.exe
 D:\pankja\WheatNikollal\Wheat\obj\Debug\Wheat.pdb
 D:\pankja\WheatNikollal\Wheat\obj\Debug\Wheat.BarChartForm.resources
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\bin\Debug\Wheat.exe.config
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\bin\Debug\Wheat.exe
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\bin\Debug\Wheat.pdb
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.AssemblyReference.cache
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.BarChartForm.resources
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.ChartForm.resources
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.Form1.resources
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.Properties.Resources.resources
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.GenerateResource.cache
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.csproj.CoreCompileInputs.cache
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.exe
+C:\Users\Niki\Documents\Proga\WheatNikollal\Wheat\obj\Debug\Wheat.pdb

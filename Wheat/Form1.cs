@@ -113,8 +113,17 @@ namespace Wheat
                 {
 
                     string year = years[j];
+                    var value = countries[i].Data[year];
 
-                    WheatDataGrid.Rows[i].Cells[j].Value = countries[i].Data[year];
+                    if (double.IsNaN(value))
+                    {
+                        WheatDataGrid.Rows[i].Cells[j].Value = "-";
+                    }
+                    else
+                    {
+                        WheatDataGrid.Rows[i].Cells[j].Value = value.ToString();
+                    }
+
                 }
             }
 
